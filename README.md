@@ -81,3 +81,40 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Role of Each file
+# App.js:
+- contains all the pages for the website
+- uses react router dom v5 to switch pages
+- contains Home, Create, BlogDetails, and NotFound pages
+# BlogDetails.js:
+- contains all the details such as suthor, paragraph, and title on the page
+- also contains the delete function to remove the blog from db.json and from the website
+# BlogList.js:
+- Takes all the blogs and formats them containing title and author
+- Blogs are all linked to a specific page depending on their blog id
+- the link takes you to the BlogDetails page which opens the blog details and is formed based on id
+# Create.js:
+- used to create a blog and add
+- includes details, such as content, author, and title
+- once blog is created, it is added to the db.json file which means that it's stored
+# Home.js:
+- the home page for the website
+- contains all the blogs here
+- uses UseFetch to json request the blogs
+- blogs are sent to BlogList where they are formatted and returned
+# index.css: 
+- contains all the fonts and colors for the
+# index.js: 
+- this is where App.js is run and the render function occurs
+- this is where the index.css is applied which goes onto the other files
+# Navbar.js:
+- this is stored in the App.js file and is in all pages
+- Links to the create and the home page
+# NotFound.js:
+- this file is the Not Found page is the user tries to acces a page that has not been created
+# useFetch.js:
+- this file makes the json request for data from the db.json file in the data folder
+- the file returns data, isPending, and error
+- data contains data and isPending and error return something other than null is there's an error with the request
